@@ -13,15 +13,25 @@ import com.alexatest.vibhuti.helloalexavibhuti.handlers.SessionEndedRequestHandl
 import com.alexatest.vibhuti.helloalexavibhuti.handlers.FallbackIntentHandler;
 import com.alexatest.vibhuti.helloalexavibhuti.handlers.DateIntentHandler;
 import com.alexatest.vibhuti.helloalexavibhuti.handlers.JurassicParkIntentHandler;
+import com.alexatest.vibhuti.helloalexavibhuti.handlers.AdditionIntentHandler;
+import com.alexatest.vibhuti.helloalexavibhuti.handlers.DivisionIntentHandler;
+import com.alexatest.vibhuti.helloalexavibhuti.handlers.MultiplicationIntentHandler;
+import com.alexatest.vibhuti.helloalexavibhuti.handlers.SubstractionIntentHandler;
+
 
 
 public class HelloWorldStreamHandler extends SkillStreamHandler {
 
-    private static Skill getSkill() {
+    @SuppressWarnings("unchecked")
+	private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
                         new CancelandStopIntentHandler(),
                         new HelloWorldIntentHandler(),
+                        new AdditionIntentHandler(),
+                        new MultiplicationIntentHandler(),
+                        new DivisionIntentHandler(),
+                        new SubstractionIntentHandler(),
                         new JurassicParkIntentHandler(),
                         new DateIntentHandler(),
                         new HelpIntentHandler(),
